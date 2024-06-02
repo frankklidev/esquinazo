@@ -2,12 +2,12 @@ import React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 
 // Importar las imágenes de productos
-import product1 from '../assets/pan.jpg';
-import product2 from '../assets/pizza.jpg';
-import product3 from '../assets/crema.jpg';
-import product4 from '../assets/baguet.jpg';
-import product5 from '../assets/pan2.jpg';
-import product6 from '../assets/espaguetti.jpg';
+import product1 from '../assets/pan.webp';
+import product2 from '../assets/pizza.webp';
+import product3 from '../assets/crema.webp';
+import product4 from '../assets/baguet.webp';
+import product5 from '../assets/pan2.webp';
+import product6 from '../assets/espaguetti.webp';
 
 const productImages = [
   { src: product1, alt: 'Producto 1' },

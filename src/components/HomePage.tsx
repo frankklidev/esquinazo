@@ -9,7 +9,7 @@ import Map from './Map';
 const HomePage: React.FC = () => {
   return (
     <Container maxWidth="lg">
-      <Box sx={{ marginTop: 10 }}>
+      <Box sx={{ marginTop: 4 }}>
         <CustomSlider />
       </Box>
       <Box sx={{ textAlign: 'center', marginTop: 4 }}>

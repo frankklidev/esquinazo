@@ -27,11 +27,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 // Importar las imágenes de las categorías
 import picaderaImg from '../assets/picadera.jpg';
 import bebidasImg from '../assets/cerveza.jpeg';
-import pastasImg from '../assets/espaguetti.jpg';
-import cremasImg from '../assets/crema.jpg';
-import platosImg from '../assets/carne.jpg';
-import sandwichsImg from '../assets/baguet.jpg';
-import hamburguesasImg from '../assets/hambur.jpg';
+import pastasImg from '../assets/espaguetti.webp';
+import cremasImg from '../assets/crema.webp';
+import platosImg from '../assets/carne.webp';
+import sandwichsImg from '../assets/baguet.webp';
+import hamburguesasImg from '../assets/hambur.webp';
 
 const categories = [
   { name: "PICADERA", image: picaderaImg },
