@@ -1,58 +1,55 @@
 import React from 'react';
-import { AppBar, Toolbar, Box, Container, Typography, Button } from '@mui/material';
+import { AppBar, Toolbar, Box, Container, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
-import { orange } from '@mui/material/colors';
-
-const Title = styled(Typography)({
-  fontSize: '2rem',
-  fontWeight: 'bold',
-  background: orange[400],
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  textShadow: '2px 2px 4px rgba(0,0,0,0.6)',
-  transition: 'transform 0.3s',
-  '&:hover': {
-    transform: 'scale(1.1)',
-  },
-});
 
 const MenuButtonContainer = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   flexGrow: 1,
+  flexWrap: 'nowrap', // Asegura que los botones no se envuelvan a la siguiente línea
 });
 
 const MenuButton = styled(Button)({
   color: '#fff',
+  fontFamily: 'Poppins, sans-serif',
+  fontWeight: 'bold',
+  fontSize: '0.875rem', // Tamaño de fuente ajustado para asegurar que los botones quepan en una línea
+  textTransform: 'uppercase',
+  borderRadius: '20px',
+  padding: '8px 16px', // Padding ajustado para asegurar que los botones quepan en una línea
   '&:hover': {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    transform: 'scale(1.1)',
   },
+  transition: 'transform 0.3s ease, background-color 0.3s ease',
+  margin: '0 4px', // Espaciado entre botones ajustado
 });
 
 const Header: React.FC = () => {
   return (
-    <AppBar position="fixed" sx={{ bgcolor: '#333' }}>
+    <AppBar
+      position="fixed"
+      sx={{
+        background: 'linear-gradient(90deg, #8B4513 0%, #FF8C00 100%)',
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+      }}
+    >
       <Container maxWidth="lg">
-        <Toolbar>
-          <Box display="flex" alignItems="center">
-            <Title>
-              Esquinazo
-            </Title>
-          </Box>
+        <Toolbar sx={{ justifyContent: 'center' }}>
           <MenuButtonContainer>
-            <Link to='/'>
+            <Link to='/' style={{ textDecoration: 'none' }}>
               <MenuButton>
                 Inicio
               </MenuButton>
             </Link>
-            <Link to='/menu'>
+            <Link to='/menu' style={{ textDecoration: 'none' }}>
               <MenuButton>
                 Menú
               </MenuButton>
             </Link>
-            <Link to='/order'>
+            <Link to='/order' style={{ textDecoration: 'none' }}>
               <MenuButton>
                 Hacer Pedido
               </MenuButton>
