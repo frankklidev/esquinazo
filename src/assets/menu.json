@@ -1,0 +1,67 @@
+{
+    "PICADERA": {
+      "MARIQUITAS DE PLÁTANO": { "price": 150, "image": "path/to/mariquitas.jpg" },
+      "ENSALADA FRÍA": { "price": 250, "image": "path/to/ensalada.jpg" },
+      "CROQUETAS DE LA CASA": { "price": 350, "image": "path/to/croquetas.jpg" },
+      "FRITURAS DE MALANGA": { "price": 300, "image": "path/to/frituras.jpg" },
+      "BOLITAS DE QUESO": { "price": 400, "image": "path/to/bolitas.jpg" },
+      "FAJITAS DE POLLO": { "price": 450, "image": "path/to/fajitas.jpg" },
+      "PAPAS FRITAS": { "price": 450, "image": "path/to/papas.jpg" },
+      "GARBANZO FRITO": { "price": 550, "image": "path/to/garbanzo.jpg" },
+      "PATACÓN DE POLLO": { "price": 600, "image": "path/to/patacon.jpg" },
+      "TACOS DE POLLO": { "price": 750, "image": "path/to/tacos.jpg" },
+      "PICADERA ESQUINAZO": { "price": 1600, "image": "path/to/picadera.jpg" }
+    },
+    "BEBIDAS Y CAFÉ": {
+      "EXPRESO": { "price": 100, "image": "path/to/expreso.jpg" },
+      "CORTADITO": { "price": 140, "image": "path/to/cortadito.jpg" },
+      "CAPUCHINO": { "price": 200, "image": "path/to/capuchino.jpg" },
+      "REFRESCO DE VASO": { "price": 25, "image": "path/to/refresco.jpg" },
+      "BATIDO DE FRUTA": { "price": 350, "image": "path/to/batido.jpg" },
+      "SUERO DE HELADO": { "price": 650, "image": "path/to/suero.jpg" }
+    },
+    "PASTAS": {
+      "SPAGHETTIS NAPOLITANO": { "price": 550, "image": "path/to/spaghettis.jpg" },
+      "AGREGOS": {
+        "AJÍ": { "price": 150, "image": "path/to/aji.jpg" },
+        "PIÑA": { "price": 150, "image": "path/to/pina.jpg" },
+        "JAMÓN": { "price": 150, "image": "path/to/jamon.jpg" },
+        "CEBOLLA": { "price": 150, "image": "path/to/cebolla.jpg" },
+        "CHORIZO": { "price": 150, "image": "path/to/chorizo.jpg" },
+        "ACEITUNA": { "price": 250, "image": "path/to/aceituna.jpg" },
+        "ATÚN": { "price": 300, "image": "path/to/atun.jpg" }
+      }
+    },
+    "CREMAS": {
+      "QUESO": { "price": 400, "image": "path/to/queso.jpg" },
+      "AURORA": { "price": 400, "image": "path/to/aurora.jpg" },
+      "VIRGINIA": { "price": 500, "image": "path/to/virginia.jpg" }
+    },
+    "PLATOS": {
+      "ARROZ FRITO": { "price": 750, "image": "path/to/arroz.jpg" },
+      "POLLO ASADO": { "price": 800, "image": "path/to/pollo_asado.jpg" },
+      "POLLO A LA BARBACOA": { "price": 950, "image": "path/to/pollo_barbacoa.jpg" },
+      "BISTEC DE POLLO EMPANIZADO": { "price": 1000, "image": "path/to/bistec.jpg" },
+      "POLLO C/ SALSA AGRIDULCE": { "price": 1200, "image": "path/to/pollo_agridulce.jpg" },
+      "PESCADO MONTE-TORO": { "price": 1400, "image": "path/to/pescado.jpg" },
+      "LOMO AHUMADO DE CERDO ENCEBOLLADO": { "price": 1500, "image": "path/to/lomo.jpg" }
+    },
+    "SANDWICHS": {
+      "PAN BAGUETTE": {
+        "CLÁSICO": { "price": 600, "image": "path/to/clasico.jpg" },
+        "DE ATÚN": { "price": 600, "image": "path/to/atun.jpg" },
+        "A LA CRIOLLA": { "price": 850, "image": "path/to/criolla.jpg" },
+        "A LA MARINERA": { "price": 900, "image": "path/to/marinera.jpg" }
+      }
+    },
+    "HAMBURGUESAS": {
+      "CLÁSICA": { "price": 500, "image": "path/to/clasica.jpg" },
+      "CHEESE BURGER": { "price": 600, "image": "path/to/cheese.jpg" },
+      "A LA CUBANA": { "price": 700, "image": "path/to/cubana.jpg" },
+      "CABALLO": { "price": 700, "image": "path/to/caballo.jpg" },
+      "ESQUINAZO": { "price": 750, "image": "path/to/esquinazo.jpg" },
+      "SÚPER ESQUINAZO": { "price": 900, "image": "path/to/super.jpg" },
+      "MEGA": { "price": 1400, "image": "path/to/mega.jpg" }
+    }
+  }
+  
