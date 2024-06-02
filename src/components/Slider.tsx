@@ -37,6 +37,7 @@ const CustomSlider: React.FC = () => {
                 alignItems: 'center',
                 justifyContent: 'center',
                 backgroundSize: 'cover',
+                backgroundPosition: 'center', // Asegúrate de centrar la imagen
                 height: '650px',
                 position: 'relative',
                 color: '#fff'
