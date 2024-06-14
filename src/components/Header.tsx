@@ -1,33 +1,46 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react';
-import { AppBar, Toolbar, Box, Container, Button } from '@mui/material';
+import { AppBar, Toolbar, Box, Container, Button, Badge, IconButton, Drawer, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from '../hooks/useCart';
+import Cart from './Cart'; // Asegúrate de importar el componente Cart
 
 const MenuButtonContainer = styled(Box)({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   flexGrow: 1,
-  flexWrap: 'nowrap', // Asegura que los botones no se envuelvan a la siguiente línea
+  flexWrap: 'nowrap',
 });
 
 const MenuButton = styled(Button)({
   color: '#fff',
   fontFamily: 'Poppins, sans-serif',
   fontWeight: 'bold',
-  fontSize: '0.875rem', // Tamaño de fuente ajustado para asegurar que los botones quepan en una línea
+  fontSize: '0.875rem',
   textTransform: 'uppercase',
   borderRadius: '20px',
-  padding: '8px 16px', // Padding ajustado para asegurar que los botones quepan en una línea
+  padding: '8px 16px',
   '&:hover': {
     backgroundColor: 'rgba(255, 255, 255, 0.2)',
     transform: 'scale(1.1)',
   },
   transition: 'transform 0.3s ease, background-color 0.3s ease',
-  margin: '0 4px', // Espaciado entre botones ajustado
+  margin: '0 4px',
 });
 
 const Header: React.FC = () => {
+  const { state } = useCart();
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  const toggleDrawer = (open: boolean) => () => {
+    setDrawerOpen(open);
+  };
+
+  const cartItems = state.items;
+
   return (
     <AppBar
       position="fixed"
@@ -39,24 +52,36 @@ const Header: React.FC = () => {
       <Container maxWidth="lg">
         <Toolbar sx={{ justifyContent: 'center' }}>
           <MenuButtonContainer>
-            <Link to='/' style={{ textDecoration: 'none' }}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <MenuButton>
                 Inicio
               </MenuButton>
             </Link>
-            <Link to='/menu' style={{ textDecoration: 'none' }}>
+            <Link to="/menu" style={{ textDecoration: 'none' }}>
               <MenuButton>
                 Menú
               </MenuButton>
             </Link>
-            <Link to='/order' style={{ textDecoration: 'none' }}>
-              <MenuButton>
-                Hacer Pedido
-              </MenuButton>
-            </Link>
           </MenuButtonContainer>
+          <IconButton color="inherit" onClick={toggleDrawer(true)}>
+            <Badge badgeContent={cartItems.length} color="secondary">
+              <ShoppingCartIcon />
+            </Badge>
+          </IconButton>
         </Toolbar>
       </Container>
+      <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer(false)}>
+        <Box
+          sx={{ width: 300 }}
+          role="presentation"
+          onKeyDown={toggleDrawer(false)}
+        >
+          <Typography variant="h6" sx={{ textAlign: 'center', mt: 2 }}>
+            Pedidos
+          </Typography>
+          <Cart /> {/* Utiliza el componente Cart aquí */}
+        </Box>
+      </Drawer>
     </AppBar>
   );
 };
