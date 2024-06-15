@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             </Link>
           </MenuButtonContainer>
           <IconButton color="inherit" onClick={toggleDrawer(true)}>
-            <Badge badgeContent={cartItems.length} color="secondary">
+            <Badge badgeContent={cartItems.length} color="primary">
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           <Typography variant="h6" sx={{ textAlign: 'center', mt: 2 }}>
             Pedidos
           </Typography>
-          <Cart /> {/* Utiliza el componente Cart aquí */}
+          <Cart />
         </Box>
       </Drawer>
     </AppBar>

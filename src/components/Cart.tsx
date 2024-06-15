@@ -24,7 +24,7 @@ const Cart: React.FC = () => {
   return (
     <Box sx={{ p: 2, mt: 4 }}>
       <Typography variant="h6" gutterBottom>
-        Orden de Compras
+        Pedido
       </Typography>
       <List>
         {state.items.map((item: any) => (
@@ -50,10 +50,10 @@ const Cart: React.FC = () => {
       </List>
       <Card sx={{ mt: 4, boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', borderRadius: 2 }}>
         <CardContent>
-          <Typography variant="h5" sx={{ textAlign: 'center', fontWeight: 'bold', color: 'primary.main' }}>
+          <Typography variant="h3" sx={{ textAlign: 'center', fontWeight: 'bold', color: 'primary.main' }}>
             Total
           </Typography>
-          <Typography variant="h6" sx={{ textAlign: 'center', mt: 1, color: 'secondary.main' }}>
+          <Typography variant="h4" sx={{ textAlign: 'center', mt: 1, color: 'primary.main' }}>
             ${state.items.reduce((total: number, item: any) => total + item.price * item.quantity, 0)} CUP
           </Typography>
         </CardContent>
